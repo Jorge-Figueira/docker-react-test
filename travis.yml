@@ -1,0 +1,10 @@
+language: generic
+sudo: require
+services:
+  - docker
+
+before_install:
+  - docker build -t jorge/frontend -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true jorge/frontend npm run test -- --converage
