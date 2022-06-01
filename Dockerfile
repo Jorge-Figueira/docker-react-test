@@ -16,6 +16,6 @@ RUN npm run build
 FROM nginx
 # Assign ports. Only used for AWS. Does not work on the terminal
 EXPOSE 80 
-# 
-COPY --from=builder /home/node/app/build user/share/nginx/html
+#Passes buid from builder image to nginx
+COPY --from=builder /home/node/app/build /usr/share/nginx/html
 
