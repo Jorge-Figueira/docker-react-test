@@ -10,7 +10,7 @@ script:
   - docker run -e CI=true jorge/frontend npm test
 
 
-doploy:
+deploy:
   provider: elastickbeanstalk
   region: "us-east-1"
   app: "docker-react"
