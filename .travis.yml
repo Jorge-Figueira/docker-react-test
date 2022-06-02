@@ -9,14 +9,13 @@ before_install:
 script:
   - docker run -e CI=true jorge/frontend npm test
 
-
 deploy:
-  provider: elastickbeanstalk
-  region: "us-east-1"
-  app: "docker-react"
-  env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-east-1-513893146427"
-  bucket_path: "docker"
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "test_terminal"
+  env: "docker-test-terminal"
+  bucket_name: "elasticbeanstalk-us-west-2-513893146427"
+  bucket_path: "test_terminal"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
