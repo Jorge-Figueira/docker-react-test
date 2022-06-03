@@ -18,7 +18,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <p>Hi there! </p>
+      <p>Changed by the feature branch to ensure it works </p>
     </div>
   );
 }
